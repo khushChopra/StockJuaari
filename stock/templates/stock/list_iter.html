@@ -1,0 +1,26 @@
+
+{% for object in object_list %}
+            <div class="col-lg-4 col-md-6 mb-4">
+              <a href="{% url 'detail' object.pk %}" style="text-decoration: none">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: blue; text-size: 25px;">
+                    {{ object.name }}
+                  </h4>
+                  <p class="card-text" style="padding-bottom: 0; margin-bottom: 0;">{{ object.sector }}</p>
+                  <p class="card-text text-muted" style="float: right; display: block; transform: translate(0,-10px)">Sector</p><hr>
+
+                  <p class="card-text" style="padding-bottom: 0; margin-bottom: 0;">{{ object.cap }}</p>
+                  <p class="card-text text-muted" style="float: right; display: block; transform: translate(0,-10px)">Cap</p><hr>
+                 
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">powered by: asf</small>
+                </div>
+              </div>
+              </a>
+            </div>
+{% endfor %}
+
+
+

@@ -1,0 +1,48 @@
+{% extends 'stock/base.html' %}
+
+{% block title %}Edit your profile{% endblock %}
+{% block body %}
+<div class="col-lg-9" style="min-height: 582px">
+<br>
+
+          <div class="card mt-4">
+            <div class="card-body">
+              <h6>Edit your profile</h6>
+              <h3 class="card-title">{{ user.name }}</h3>
+               <p class="card-text" >you cannot change your Email ID</p></a>
+
+            </div>
+          </div>
+          <!-- /.card -->
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block">Your Profile</p><br>
+            </div>
+            <div class="card-body">
+
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <p><label for="id_age">Age:</label>
+                    <input type="number" style="float: right;" name="age" required id="id_age" /><hr>
+                    <label for="id_company">Company:</label>
+                    <input type="text" name="company" style="float: right;" maxlength="50" required id="id_company" /><p>
+                <br><button type="submit" >Save changes</button>
+            </div>
+          </div>
+
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+
+          <!-- /.card -->
+
+        </div>
+
+
+
+      </div>
+
+
+
+{% endblock %}

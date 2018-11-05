@@ -1,0 +1,58 @@
+{% extends 'stock/base.html' %}
+
+{% block title %}Your notifications{% endblock %}
+{% block notif %} id="activated" {% endblock %}
+{% block body %}
+
+<div class="col-lg-9" style="padding: 25px; min-height: 582px;">
+          <div class="row">
+
+            {% include 'stock/tickeriter.html' %}
+
+            <div class="card card-outline-secondary my-4" style="width: 900px;">
+            <div class="card-header" style="min-width: 100%;">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block">Your stocks</p><br>
+            </div>
+            <div class="card-body" >
+                {% for item in user.stocks.all %}
+              <a href="{% url 'detail' item.pk %}"><h5 style="left: 50%; transform: translate(-50%,0); position: absolute;">{{ item.name }}</h5></a><br>
+                <p>Sector </p><p style="float: right;"> {{ item.sector }}</p>
+                <p>High </p><p style="float: right;"> {{ item.high }}</p>
+                <p>Low </p><p style="float: right;"> {{ item.low }}</p>
+                <p>Hold? </p><p style="float: right;">{% if item.hold %} <p style="color: green;float: right;"> YES</p> {% else %}<p style="color: red;float: right;"> NO</p> {% endif %} </p>
+
+
+                <br>
+                {% if forloop.counter != user.stocks.count %}  <hr> {% endif %}
+               {% endfor %}
+            </div>
+          </div>
+             <div class="card card-outline-secondary my-9" style="width: 900px;">
+            <div class="card-header">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block"> Highlights </p><br>
+            </div>
+            <div class="card-body">
+              <h5 style="position: relative; left: 745px; transform: translate(-50%,0);">Best yearly</h5>
+              <p style="left: 450px; transform: translate(-50%,0);">{% for entry in by %}
+                <li><a href="{% url 'detail' entry.pk %}">{{entry.name}}</a></li>
+
+                {% endfor %}</p>
+              <hr>
+              <h5 style="position: relative; left: 745px; transform: translate(-50%,0);">Highest high</h5>
+              <p style="left: 450px;">{% for entry in hh %}
+                <li><a href="{% url 'detail' entry.pk %}">{{entry.name}}</a></li>
+
+                {% endfor %}</p>
+
+
+              </div>
+          </div>
+
+
+          </div>
+          <!-- /.row -->
+
+</div>
+
+
+{% endblock %}

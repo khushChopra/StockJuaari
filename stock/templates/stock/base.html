@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'images/logo.jpg' %}" >
+    <title>{% block title %}Stock Juaari{% endblock %}</title>
+
+    <link href="{% static 'css/styler.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animation.css' %}" rel="stylesheet">
+    <style>
+
+
+
+
+
+
+
+
+
+
+         body {
+       padding-top: 54px;
+    }
+
+    @media (min-width: 992px) {
+      body {
+          padding-top: 56px;
+        }
+     }
+     .list-group-ite {
+        padding: 5px;
+        height: 46px;
+        border: 3px solid #1ca9b6;
+        border-radius: 23px;
+        margin-bottom: 7px;
+        text-align: center;
+        color: #1ca9b6;
+        transition-duration: 200ms;
+     }
+
+     .list-group-ite:hover {
+        text-decoration: none;
+        padding: 5px;
+        height: 46px;
+        border: 3px solid transparent;
+        border-radius: 23px;
+        margin-bottom: 7px;
+        text-align: center;
+        color: white;
+        background-color: #1ca9b6;
+     }
+     #activated {
+        text-decoration: none;
+        padding: 5px;
+        height: 46px;
+        border: 3px solid transparent;
+        border-radius: 23px;
+        margin-bottom: 7px;
+        text-align: center;
+        color: white;
+        background-color: #1ca9b6;
+     }
+      .btn-outline-success:hover {
+      background-color: white;
+     }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" style="font-family: 'Roboto Slab', arial;" href="{% url 'home' %}">Stock Juaari</a>
+            <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'search' %}">
+              {% csrf_token %}
+              <input class="form-control mr-sm-2" style="width: 367px;" name="searched" type="text" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" style="color: #1ca9b6; border-color: #1ca9b6" type="submit">Search</button>
+            </form>
+        <div class="" id="navbarResponsive">
+
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'services' %}">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+
+          <h1 class="my-4"></h1>
+          <div class="list-group">
+            <a href="{% url 'dashboard' %}" class="list-group-ite" {% block dashboard %} {% endblock %} >Dashboard</a>
+            <a href="{% url 'profile' %}" class="list-group-ite" {% block addstock %} {% endblock %} >Profile</a>
+            <a href="{% url 'all' %}" class="list-group-ite" {% block all_stock %} {% endblock %} >All Stock</a>
+            <a href="{% url 'noti' %}" class="list-group-ite" {% block notif %} {% endblock %} >Notification</a>
+
+            <a href="{% url 'logout' %}" class="list-group-ite" {% block tyetr %} {% endblock %} >Log Out</a>
+          </div>
+          <div style="width: 255px; border: 0px solid black; padding-bottom: 20px;">
+
+            <img class="card-img-top img-fluid"  src="{% static 'images/rss.png' %}" style="width: 20px; display: inline;" alt="RSS"><p style="">RSS Feed</p>
+            {% for entry in feeds.entries %}
+              <li><a href="{{entry.link}}">{{entry.title}}</a></li>
+
+            {% endfor %}
+          </div>
+          <!--<img class="card-img-top img-fluid"  src="{% static 'images/Untitled-1.png' %}" style="position: fixed;width: 255px;z-index: -1;" alt="Stock Juaari">-->
+        </div>
+        <!-- /.col-lg-3 -->
+         {% block body %}
+        <div class="col-lg-9" style="padding: 25px; min-height: 582px;">
+          {% for item in user.stocks.all %}
+          <p> {{ item }} </p>
+          {% endfor %}
+
+        </div>
+        <!-- /.col-lg-9 -->
+        {% endblock %}
+      </div>
+
+    </div>
+
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container" style="width: 100%">
+        <p class="m-0 text-center text-white">Copyright &copy; Stock Juaari 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>

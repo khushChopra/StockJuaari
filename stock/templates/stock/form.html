@@ -1,0 +1,54 @@
+
+
+{% load static %}
+<!--
+          <form method="post" action="">
+              {% csrf_token %}
+              {{ form }}
+              <br>
+              <button type="submit" >Save</button>
+          </form>
+-->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+
+
+
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+
+
+
+          <form method="post" action="">
+              <h1>Sign up</h1><br/>
+              {% csrf_token %}
+              <input type="text" name="name" maxlength="50" required id="id_name"  placeholder="Full name"/>
+
+              <input type="text" name="email_ID" maxlength="50" required id="id_email_ID" placeholder="Email address"/>
+              <input type="password" name="password" minlength="8" required id="id_password" placeholder="Password"/>
+              <input type="password" placeholder="Confirm Password" name="confirm_password" minlength="8" required id="id_confirm_password" />
+              <input type="text" name="company" maxlength="80" required id="id_company"  placeholder="Company" />
+
+
+              <button type="submit" value="Sign Up" title="Submit form" class="icon-arrow-right"><span>Sign up</span></button>
+          </form>
+  <script src="{% static 'css/a.js' %}">
+
+    <script  src="{% static 'css/index.js' %}"></script>
+
+</body>
+</html>

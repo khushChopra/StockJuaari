@@ -1,0 +1,52 @@
+{% extends 'stock/base.html' %}
+
+{% block title %}Your profile{% endblock %}
+{% block addstock %}  id="activated"  {% endblock %}
+{% block body %}
+<div class="col-lg-9" style="min-height: 582px">
+<br>
+
+          <div class="card mt-4">
+            <div class="card-body">
+              <h6>Welcome to your profile</h6>
+              <h3 class="card-title">{{ user.name }}</h3>
+               <a href="{% url 'edit' %}"  style="padding: 10px;"><p class="card-text" style="float: right;">Edit Profile</p></a>
+
+            </div>
+          </div>
+          <!-- /.card -->
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block">Your Profile</p><br>
+            </div>
+            <div class="card-body">
+                <p>Age</p>
+                {% if user.age == 0 %}
+                <h3>Haven't entered age</h3><hr>
+                {% else %}
+                <h3>{{ user.age }}</h3><hr>
+                {% endif %}
+
+                <p>Company</p>
+                <h3>{{ user.company }}</h3><hr>
+                <p>Email</p>
+                <h3>{{ user.email }}</h3>
+            </div>
+          </div>
+
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+
+          <!-- /.card -->
+
+        </div>
+
+
+
+      </div>
+
+
+
+{% endblock %}

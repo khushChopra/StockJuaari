@@ -1,0 +1,77 @@
+{% extends 'stock/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block dashboard %} id="activated" {% endblock %}
+{% block body %}
+
+<div class="col-lg-9"><br>
+        {% include 'stock/tickeriter.html' %}
+          <div class="card mt-4">
+            <div class="card-body">
+              <h4>Welcome</h4>
+              <h3 class="card-title">{{ user.name }}</h3>
+              <p class="card-text">In case you missed the heading, this is your dashboard which enlists your personal
+portfolio along with a plethora of stocks, both purchased and available, with their
+individual parametric attributes. We present you with an interactive platform, powered by
+simple and smart features designed to cater all your investment needs. Buy or sell
+stocks online with the help of our predictive notifications and utilise our screening and
+comparison tools to know what’s the best move for you!</p>
+
+              <p class="text-muted">  - Team Stock Juaari</p>
+            </div>
+          </div>
+          <!-- /.card -->
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block"> Introducing StockJuaari </p><br>
+            </div>
+            <div class="card-body">
+              <p>The stock market goes up and down, but savvy investors come out ahead over the long
+term. You don&#39;t need to be a hedge-fund manager or a billionaire. An ordinary individual
+investor can beat Wall Street at its own game. You just need to have information that
+gives you an edge. That&#39;s where StockJuaari come in. We provide stock predictions that
+can beat the market. Imagine where you will be 10 years from now if you start paying
+attention to our stock forecasts.</p>
+              <br>
+              <p>
+                The results may seem like magic, but there is sophisticated math behind them. First, we
+harness the collective intelligence of online investors. Unlike others, we don&#39;t stop there.
+The data we collect is just the raw material for our complex analyses. Our founders,
+sophomores at Computer Science, IIT (BHU) Varanasi, create algorithms that are able
+to mine our huge collection of data to determine which of our collective predictions are
+most likely to be accurate and should be given the most weight.
+              </p><br>
+              <p>These two layers — collecting large quantities of useful data and ranking and analysing
+them in subtle ways — combine to produce a model with the power to make market-
+beating predictions. With StockJuaari, you don&#39;t have to choose between the collective
+wisdom of the crowds or the expertise of the exceptional investors. We present you with
+actionable information from both, filtered through our algorithms that collect the data that
+has the strongest predictive power.
+              </p>
+            </div>
+          </div>
+<!-- /.card
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block"> About the developer </p><br>
+            </div>
+            <div class="card-body">
+              <h5>Khush Chopra</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <hr>
+              <h5>Raghav Kabra</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <hr>
+              <h5>Suyash Shukla</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <hr>
+              <h5>Saurabh Chauhan</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            </div>
+          </div>
+           -->
+
+        </div>
+
+
+{% endblock %}

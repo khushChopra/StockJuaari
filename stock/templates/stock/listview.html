@@ -1,0 +1,58 @@
+{% extends 'stock/base.html' %}
+
+{% block title %}All stock{% endblock %}
+{% block all_stock %} id="activated" {% endblock %}
+{% block body %}
+
+<div class="col-lg-9" style="padding: 25px; min-height: 582px;">
+          <div class="row">
+
+            {% include 'stock/tickeriter.html' %}
+              &nbsp;&nbsp;&nbsp;&nbsp;<h4 style="left: 100px; transform: translate(0, -17%);">Filters</h4>
+            <div class="row" style="width: 100%;">
+
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h6 style="transform: translate(0, 5%);">By name: </h6>&nbsp;
+            <a href="/stock/all/0/1"> < </a>&nbsp;
+            <a href="/stock/all/3/1" > > </a><hr>
+                &nbsp;&nbsp; <h6 style="transform: translate(0, 5%);">By high: </h6>&nbsp;
+            <a href="/stock/all/1/1"> < </a>&nbsp;
+            <a href="/stock/all/4/1" > > </a><hr>
+                &nbsp;&nbsp; <h6 style=" transform: translate(0, 5%);">By yearly: </h6>&nbsp;
+            <a href="/stock/all/2/1"> < </a>&nbsp;
+            <a href="/stock/all/5/1" > > </a><hr>
+
+
+            </div>
+            {% include 'stock/list_iter.html' %}
+
+
+              </div>
+          <!-- /.row -->
+    <div style="left: 50%; transform: translate(50%, 0);">
+    {% if object_list.has_other_pages %}
+        <ul class="pagination">
+    {% if object_list.has_previous %}
+      <li><a href="{% url 'k' fby pn %}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}&nbsp;
+    {% for i in object_list.paginator.page_range %}
+      {% if object_list.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="{% url 'k' fby i %}">{{ i }}</a></li>
+      {% endif %}&nbsp;
+    {% endfor %}
+    {% if object_list.has_next %}
+      <li><a href="{% url 'k' fby pp %}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+    </div>
+{% endif %}
+
+        </div>
+
+{% endblock %}

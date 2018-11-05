@@ -1,0 +1,58 @@
+{% extends 'stock/base.html' %}
+
+{% block title %}{{ object.name }} in detail{% endblock %}
+{% block body %}
+<div class="col-lg-9" style="min-height: 582px">
+<br>
+{% include 'stock/tickeriter.html' %}
+
+
+          <div class="card mt-4">
+            <div class="card-body">
+              <h6>{{ object.cap }}</h6>
+              <h3 class="card-title">{{ object.name }}</h3>
+              <p class="card-text" style="float: right;">Sector: {{ object.sector }}</p>
+
+            </div>
+          </div>
+          <!-- /.card -->
+
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block">Statistics</p><br>
+            </div>
+            <div class="card-body">
+                <p>Last trade price</p>
+                <h3>{{ object.last_trade_price }}</h3><hr>
+                <p>High</p>
+                <h3>{{ object.high }}</h3><hr>
+                <p>Low</p>
+                <h3>{{ object.low }}</h3><hr>
+                <p>Yearly</p>
+                <h3>{{ object.yearly }}</h3><hr>
+                <p>Q1</p>
+                <h3>{{ object.q1 }}</h3><hr>
+                <p>Q2</p>
+                <h3>{{ object.q2 }}</h3><hr>
+                <p>Q3</p>
+                <h3>{{ object.q3 }}</h3>
+            </div>
+          </div>
+            <a href="addtolist/" class="list-group-ite" style="padding: 10px;">Add to list</a>
+            <a href="remove/" class="list-group-ite" style="padding: 10px;">remove from list</a>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+
+          <!-- /.card -->
+
+        </div>
+
+
+
+      </div>
+
+
+
+{% endblock %}

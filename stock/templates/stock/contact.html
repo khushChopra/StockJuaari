@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'images/logo.jpg' %}" >
+    <title>Contact</title>
+
+    <link href="{% static 'css/styler.css' %}" rel="stylesheet">
+    <style>
+         body {
+       padding-top: 54px;
+    }
+
+    @media (min-width: 992px) {
+      body {
+          padding-top: 56px;
+        }
+
+    .btn-outline-success:hover {
+      background-color: white;
+     }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" style="font-family: 'Roboto Slab', serif;" href="{% url 'home' %}">Stock Juaari</a>
+
+        <div class="" id="navbarResponsive">
+
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'services' %}">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12" style="padding: 25px 0;">
+
+          <div class="row">
+
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block">Contact the devs</p><br>
+            </div>
+            <div class="card-body">
+              <h5>Khush Chopra</h5>
+              <p>This being a bit intensive project, the responsibilities were appropriately divided among
+the member developers and their efforts were validated by each of the others. The user
+interface of the website needed to be very commodious and convenient for a very
+pleasant user experience. Apart from this, the backend of the website required to be
+easily readable and reusable as various developers were involved in its making. He
+ensured that we implement jinja templating, thus our code is much more efficient and
+easy to debug.</p>
+              <small class="text-muted">16074008</small>
+                <hr>
+              <h5>Raghav Kabra</h5>
+              <p>The database models acted as substrata for the project and required utmost diligence in
+their creation. They were created with the thought in mind to optimise the data storage
+needs of the user along with the speedy processing capabilities of the system to ensure
+the best user experience.</p>
+              <small class="text-muted">16074010</small>
+                <hr>
+              <h5>Saurabh Chauhan</h5>
+              <p>It was essential for the website to provide the user with an assortment of services for the
+most customizable experience. Thus, our developers implemented services like
+StockScreener and Stockopedia for filtering and detailed examination of stocks
+according to their marketing needs. They can view their customised notifications for
+quick access to their stocks and take decisions in a swift manner.</p>
+              <small class="text-muted">16074012</small>
+                <hr>
+              <h5>Suyash Shukla</h5>
+              <p>He was involved in the mining, extraction and filtering of real stock data. We
+implemented state of the art statistical models and relevant analytical algorithms, for the
+determination of our collective predictions of the stock market to be as accurate as
+possible.</p>
+                 <small class="text-muted">16074014</small>
+            </div>
+          </div>
+
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12" style="padding: 25px 0;">
+
+          <div class="row">
+
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block">Feedback</p><br>
+            </div>
+            <div class="card-body">
+              <h5>Khush Chopra</h5>
+              <p>Contact our representative for any feedback or suggestions you may have for our services to ensure a smoother experience. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</p>
+              <small class="text-muted">9838783612</small>
+                <hr>
+              <form method="post" action="">
+              {% csrf_token %} <!--
+              {{ form }} -->
+
+
+              <tr><th><label for="id_name">Name:</label></th><td><input type="text" name="name" style="display: block; width: 350px" maxlength="50" required id="id_name" /></td></tr><br>
+<tr><th><label for="id_content">Content:</label></th><td><input type="text" style="display: block; width: 100%;" name="content" maxlength="1000" required id="id_content" /></td></tr><br>
+              <button type="submit" >Save</button>
+            </form>
+            </div>
+          </div>
+
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+
+
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Stock Juaari 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>

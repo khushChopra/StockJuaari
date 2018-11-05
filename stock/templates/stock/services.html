@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'images/logo.jpg' %}" >
+    <title>Services</title>
+
+    <link href="{% static 'css/styler.css' %}" rel="stylesheet">
+    <style>
+         body {
+       padding-top: 54px;
+    }
+
+    @media (min-width: 992px) {
+      body {
+          padding-top: 56px;
+        }
+     }
+     .btn-outline-success:hover {
+      background-color: white;
+     }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" style="font-family: 'Roboto Slab', serif;" href="{% url 'home' %}">Stock Juaari</a>
+
+        <div class="" id="navbarResponsive">
+
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'services' %}">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+
+
+        <div class="col-lg-3 card h-100" style="padding-bottom: 20px; position: relative; top: 25px;">
+
+          <h1 class="my-4"><img src="{% static 'images/logo_full.png' %}" height="70px"></h1>
+          <div align="justify"  style="padding-left: 15px;">
+              StockJuaari is powered by simple and smart features designed to cater all your investment needs . It offers
+valuable and insightful research reports along with advanced self-research tools for effective online stock
+analysis.
+          </div>
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9 " style="padding: 25px;">
+
+
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: blue">
+                    Stock Screener
+                  </h4>
+                  <p class="card-text">Juaari Screener is a stock analysis and screening tool to see information of listed IPO companies in a
+customizable way.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">powered by: asf</small>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: blue">
+                    Algorithm:
+                  </h4>
+                  <p class="card-text">
+StockJuaari is a financial services website that utilizes an advanced self-learning algorithm to analyse,
+model and predict the stock market. Our research department is observing algorithmic forecasts
+looking for unique market opportunities.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">powered by: asf</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: blue">
+                    Notification
+                  </h4>
+                  <p class="card-text">Get real time stock price alerts on your account with our stock price notification service. Track and
+manage stock market quotes. The StockJuaari notifications provide a simple way to get index
+performance without having to open other finance websites.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">powered by: asf</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: blue">
+                    Stock comparison tool
+                  </h4>
+                  <p class="card-text">Use Stock Selector to compare stocks. Stock Selector helps you objectively compare stocks to form
+an opinion on their relative strengths. You can define your stock universe based on parameters such
+as index, market capitalisation, sector or industry.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">powered by: asf</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: blue">
+                    Dashboard
+                  </h4>
+                  <p class="card-text">Keep your stocks up to date in your personal portfolio and visualise your real time stock market
+profits.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">powered by: asf</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: blue">
+                    Stock Guide
+                  </h4>
+                  <p class="card-text">StockJuaari offers you services which advises you in buying and selling your stocks at optimal
+instances of times.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">powered by: asf</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: blue">
+                    Stockopedia
+                  </h4>
+                  <p class="card-text">Get detailed information about all the stocks listed in our website like sectors, cap category, yearly
+and quarterly gains, etc.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">powered by: asf</small>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+
+
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Stock Juaari 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>

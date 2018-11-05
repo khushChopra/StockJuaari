@@ -1,0 +1,251 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="icon" href="{% static 'images/logo.jpg' %}" >
+        <link rel="stylesheet" href="static/CSS/first.css">
+        <title>
+            Stock Juaari
+        </title>
+        <style>
+            body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=password], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            display: block;
+            width: 100%;
+            background-color: #1f468e;
+            color: aliceblue;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+            transition-duration: 200ms;
+        }
+
+        input[type=submit]:hover {
+            color: #1f468e;
+            background-color: aliceblue;
+        }
+
+
+        h2 {
+            font-family: sans-serif;
+            color: azure;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            width: auto;
+        }
+
+        .login {
+            height: 70%;
+            position: relative;
+            top: 15%;
+            width: 70%;
+            min-width: 500px;
+            display: table;
+            margin: 0 auto;
+            padding-left: 28px;
+            padding-right: 28px;
+            border: 2px solid #1f468e;
+            vertical-align: middle;
+            border-radius: 4px;
+            border-radius: 8px;
+            background-color: #1f1f1f;
+            max-width: 700px;
+        }
+
+        .logi {
+            height: auto;
+            position: relative;
+            top: 10%;
+            width: 70%;
+            min-width: 500px;
+            display: table;
+            margin: 0 auto;
+            padding: 20px 28px ;
+            border: 4px solid #1f468e;
+            vertical-align: middle;
+            border-radius: 8px;
+            background-color: aliceblue;
+
+        }
+
+        .phead {
+            display: inline;
+            font-family: sans-serif;
+            color: #1f1f1f;
+            font-size: 35px;
+        }
+
+        .pline {
+            display: inline;
+            font-family: sans-serif;
+            color: #1f1f1f;
+            font-size: 16px;
+            line-height: normal;
+        }
+
+        div.person {
+            display: block;
+            vertical-align: auto;
+            padding-bottom: 35px;
+        }
+
+        .bottomline {
+            border-bottom: 4px dashed #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .object{
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .small {
+            height: auto;
+            background-color: #1f1f1f;
+            margin: 1px solid black;
+        }
+        .two {
+            background-image: url(http://i.imgur.com/3ssLSdG.jpg);
+            height: auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .one {
+            background-image: url(http://i.imgur.com/ke3HQLQ.jpg);
+        }
+
+        h1 {
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
+            position: relative;
+            top: 5%;
+            font-family: sans-serif;
+            color: #1f1f1f;
+        }
+
+        .inside {
+            padding: 20px 10%;
+        }
+
+        .info {
+            border-radius: 3px;
+            box-shadow: 1px 1px 5px #1f468e;
+            color: aliceblue;
+        }
+
+        p {
+            padding: 30px;
+            margin: 0px;
+            font-family: sans-serif;
+            line-height: 22px;
+
+        }
+
+        h2 {
+            padding-top: 20px;
+            margin: 0px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="object one">
+            <div class="login">
+                <br>
+                <br>
+                <img src="http://i.imgur.com/IWz4hU8.png" height="70px">
+                <h2>Welcome To Stock Juaari</h2>
+                <br>
+                <br>
+                <br>
+                <form action="" method="post">
+                    {% csrf_token %}
+    <input type="text" id="fname" name="email_id" maxlength="50" placeholder="Enter Email ID" required id="id_email_id" >
+    <input type="password" id="lname" name="password" placeholder="Please Enter Password" minlength="8" required id="id_password">
+                     <input type="submit" value="Login">
+  </form>
+
+                <div class="bottomline"></div>
+                <div style="text-align: center; vertical-align: middle; "><p style="color: aliceblue; font-size: 20px; text-decoration: none; padding-bottom: 0px;">Not a member? <a href="{% url 'register' %}" style="color: #1f468e">Sign Up</a></p></div>
+                <div style="text-align: center; vertical-align: middle; "><p style="color: aliceblue; font-size: 20px; text-decoration: none; padding-bottom: 10px;"><a href="{% url 'social:begin' 'github' %}" style="color: aqua">Login with GitHub</a></div>
+            </div>
+        </div>
+        <div class="object small">
+            <div class="inside">
+                <div class="info">
+                    <h2 style="text-align: center; font-family: sans-serif">About Stock Juaari</h2>
+                    <p>We present you with an interactive platform StockJuaari, powered by simple and smart
+features designed to cater all your investment needs. Stock screener tool helps you to
+choose your stock investments based on fundamental company analysis while it will also
+aid you to select best performing stocks based on sound technical analysis. Our stock
+analysis platform is power packed with useful features like advanced portfolio tracker,
+market watch, stock screener, technical analysis of stocks and many more.</p>
+                </div>
+            </div>
+        </div>
+        <div class="object two">
+            <h1>About the Developers</h1>
+            <div class="logi">
+                <div class="person">
+                    <h3 class="phead">Khush Chopra</h3>
+                    <p class="pline">I do like Pina Coladas and getting caught in the rain.</p>
+                </div>
+                <div class="person">
+                    <h3 class="phead">Raghav Kabra</h3>
+                    <p class="pline">Bilwara is the manchester of Asia.</p>
+                </div>
+                <div class="person">
+                    <h3 class="phead">Saurabh Chauhan</h3>
+                    <p class="pline">I am  only human</p>
+                </div>
+                <div class="person">
+                    <h3 class="phead">Suyash Sukhla</h3>
+                    <p class="pline">follow me down the valley below</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+      <link rel="icon" href="{% static 'images/logo.jpg' %}" >
+    <title>About Us</title>
+
+    <link href="{% static 'css/styler.css' %}" rel="stylesheet">
+    <style>
+         body {
+       padding-top: 54px;
+    }
+
+    @media (min-width: 992px) {
+      body {
+          padding-top: 56px;
+        }
+     }
+     .btn-outline-success:hover {
+      background-color: white;
+     }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" style="font-family: 'Roboto Slab', serif;" href="{% url 'home' %}">Stock Juaari</a>
+
+        <div class="" id="navbarResponsive">
+
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link  active" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'services' %}">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div class="card mt-4" style="border-radius: 38px">
+            <img class="card-img-top img-fluid" src="{% static 'images/logo_full.png' %}" alt="Stock Juaari">
+            <div class="card-body">
+              <h4>About</h4>
+              <h3 class="card-title">Stock Juaari</h3>
+              <p class="card-text">StockJuaari is powered by simple and smart features designed to cater all your investment needs . It offers
+valuable and insightful research reports along with advanced self-research tools for effective online stock
+analysis. Stock screener tools helps you to choose your stock investments based on fundamental company
+analysis while it will also aid you to select best performing stocks on the basis of sound technical analysis.
+Moreover, the platform has been designed to sense what you need and personalize what you see. Our stock
+analysis platform is power packed with useful features like advanced portfolio tracker, market watch, stock
+screener, technical analysis of stocks and many more. StockJuaari also offers an exclusive research enabled
+trading platform exclusively for derivatives customers. Open an online services account with StockJuaari today
+and enjoy these exclusive features for free!</p>
+              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+              - Times of India
+            </div>
+          </div>
+          <!-- /.card -->
+
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+                <p style="position: absolute ; left: 50%; transform: translate(-50%,0); display: block"> About the developer </p><br>
+            </div>
+            <div class="card-body">
+              <h5>Khush Chopra</h5>
+              <p>I like to create elegant designs and ensure every line of code works efficiently! I can talk
+about artworks all day long and make sure you absolutely get bored by the end of it.</p>
+              <hr>
+              <h5>Raghav Kabra</h5>
+              <p>I like things done quickly and be done with watching at screens and travel the world and
+come up with interesting ideas to make the world a more conducive place.</p>
+                <hr>
+              <h5>Suyash Shukla</h5>
+                <p>I’m deeply intrigued by the capabilities of statistical analysis of data to implement
+machine learning algorithms and love to create new and revolutionary ideas.</p><hr>
+              <h5>Saurabh Chauhan</h5>
+              <p>Fascinated by all the artistic and technical things in this world, I’m the curious one of the
+lot to break things down to their basics. A teeny bit of interest in the stock market and the
+capabilities of machine learning make me the right person to talk to.</p>
+            </div>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Stock Juaari 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>

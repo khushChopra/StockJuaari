@@ -1,0 +1,13 @@
+
+
+<div class="ticker-wrap" style="margin-bottom: 10px;">
+    <div class="ticker">{% for kam in bigasslist %}
+    <div class="ticker__item">
+
+
+        <span>{{ kam.name }}</span>
+         <span class="dwnchng"> {{ kam.last_trade_price }}
+        &nbsp; &nbsp;  </span></div>
+     {% endfor %}
+    </div>
+</div>
